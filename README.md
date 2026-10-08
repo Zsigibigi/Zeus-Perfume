@@ -1,14 +1,27 @@
 # ZEUS — Az istenek illata
 
 Animált, mobilra optimalizált bemutató oldal a **Zeus** és a **Pharaon** parfümhöz
-(Eau de Parfum, 100 ml, 51 600 Ft). Tiszta HTML + CSS + JavaScript, külső könyvtár nélkül.
+(Eau de Parfum, 100 ml, 51 600 Ft). **Next.js** (App Router) projekt, az animációk külső animációs könyvtár nélkül készültek.
 
 ## Indítás
 
 ```bash
-python3 -m http.server 8000
-# majd: http://localhost:8000
+npm install
+npm run dev      # fejlesztői szerver: http://localhost:3000
+npm run build    # éles build
+npm start        # éles szerver
 ```
+
+Közzététel: a repót a [Vercelen](https://vercel.com/new) importálva automatikusan kitelepül.
+
+## Fájlok
+
+- `app/page.jsx` – az oldal tartalma (hero, kollekció, lábléc)
+- `app/layout.jsx` – betűtípusok (`next/font`), meta adatok
+- `app/globals.css` – minden stílus és CSS animáció
+- `components/ZeusEffects.jsx` – kliens komponens, ez indítja az animációkat
+- `lib/zeus.js` – intro, villámok, 3D palackok, kollekcióváltó, kosár
+- `public/img/` – a háttér nélküli palackképek
 
 ## Felépítés (rövid, kb. 2,5–3 képernyő)
 
@@ -34,11 +47,11 @@ python3 -m http.server 8000
 - Minden CSS animáció csak `transform`/`opacity` (GPU-n fut).
 - A villámok canvasra rajzolódnak `shadowBlur` nélkül, és a canvas csak akkor dolgozik,
   amikor éppen van villám vagy szikra.
-- A betűtípusok nem blokkolják a megjelenést.
+- A betűtípusokat a `next/font` helyben szolgálja ki, nem blokkolják a megjelenést.
 
 ## Szerkesztés
 
-- Termékek (név, leírás, illatjegyek, ár): `js/main.js` → `PRODUCTS`
-- Szövegek: `index.html`
-- Színek, betűtípusok: `css/style.css` → `:root`
-- Képek: `assets/img/zeus.webp`, `assets/img/pharaon.webp` (háttér nélküli palackok)
+- Termékek (név, leírás, illatjegyek, ár): `lib/zeus.js` → `PRODUCTS`
+- Szövegek: `app/page.jsx`
+- Színek: `app/globals.css` → `:root`
+- Képek: `public/img/zeus.webp`, `public/img/pharaon.webp`
