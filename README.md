@@ -3,16 +3,24 @@
 Animált, mobilra optimalizált bemutató oldal a **Zeus** és a **Pharaon** parfümhöz
 (Eau de Parfum, 100 ml, 51 600 Ft). **Next.js** (App Router) projekt, az animációk külső animációs könyvtár nélkül készültek.
 
-## Indítás
+## Élő oldal
+
+**https://zsigibigi.github.io/Zeus-Perfume/**
+
+Minden feltöltés (push) után a `.github/workflows/pages.yml` automatikusan
+újraépíti az oldalt (statikus export), és kiteszi a `gh-pages` ágra.
+
+Egyszeri beállítás a GitHubon: **Settings → Pages → Build and deployment →
+Source: Deploy from a branch → Branch: `gh-pages` / `(root)` → Save**.
+
+## Indítás helyben
 
 ```bash
 npm install
 npm run dev      # fejlesztői szerver: http://localhost:3000
-npm run build    # éles build
-npm start        # éles szerver
+npm run build    # statikus export az out/ mappába
+npm start        # az out/ mappa kiszolgálása
 ```
-
-Közzététel: a repót a [Vercelen](https://vercel.com/new) importálva automatikusan kitelepül.
 
 ## Fájlok
 
@@ -21,7 +29,8 @@ Közzététel: a repót a [Vercelen](https://vercel.com/new) importálva automat
 - `app/globals.css` – minden stílus és CSS animáció
 - `components/ZeusEffects.jsx` – kliens komponens, ez indítja az animációkat
 - `lib/zeus.js` – intro, villámok, 3D palackok, kollekcióváltó, kosár
-- `public/img/` – a háttér nélküli palackképek
+- `assets/img/` – a háttér nélküli palackképek
+- `.github/workflows/pages.yml` – automatikus kitelepítés GitHub Pages-re
 
 ## Felépítés (rövid, kb. 2,5–3 képernyő)
 
@@ -54,4 +63,4 @@ Közzététel: a repót a [Vercelen](https://vercel.com/new) importálva automat
 - Termékek (név, leírás, illatjegyek, ár): `lib/zeus.js` → `PRODUCTS`
 - Szövegek: `app/page.jsx`
 - Színek: `app/globals.css` → `:root`
-- Képek: `public/img/zeus.webp`, `public/img/pharaon.webp`
+- Képek: `assets/img/zeus.webp`, `assets/img/pharaon.webp`

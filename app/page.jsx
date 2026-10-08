@@ -1,4 +1,6 @@
 import ZeusEffects from '../components/ZeusEffects';
+import zeusImg from '../assets/img/zeus.webp';
+import pharaonImg from '../assets/img/pharaon.webp';
 
 export default function Home() {
   return (
@@ -54,7 +56,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="hero__bottle">
-                <div className="b3d m-zeus" id="heroBottle" data-src="/img/zeus.webp" data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz, koppints rá a villámhoz"></div>
+                <div className="b3d m-zeus" id="heroBottle" data-src={zeusImg.src} data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz, koppints rá a villámhoz"></div>
               </div>
             </div>
 
@@ -139,10 +141,10 @@ export default function Home() {
                 </div>
                 <div className="stage__rings" aria-hidden="true"><i></i><i></i><i></i></div>
                 <div className="stage__slot is-active" data-product="zeus">
-                  <div className="b3d m-zeus" data-src="/img/zeus.webp" data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz"></div>
+                  <div className="b3d m-zeus" data-src={zeusImg.src} data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz"></div>
                 </div>
                 <div className="stage__slot" data-product="pharaon">
-                  <div className="b3d m-pharaon" data-src="/img/pharaon.webp" data-label="Pharaon parfümösüveg – húzd oldalra a forgatáshoz"></div>
+                  <div className="b3d m-pharaon" data-src={pharaonImg.src} data-label="Pharaon parfümösüveg – húzd oldalra a forgatáshoz"></div>
                 </div>
                 <button className="stage__arrow stage__arrow--prev" type="button" data-step="-1" aria-label="Előző parfüm"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
                 <button className="stage__arrow stage__arrow--next" type="button" data-step="1" aria-label="Következő parfüm"><svg aria-hidden="true"><use href="#i-right"/></svg></button>

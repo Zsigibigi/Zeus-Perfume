@@ -44,8 +44,8 @@ ul { list-style: none; }
 .svg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
 .container { width: min(1200px, 100% - var(--gutter) * 2); margin-inline: auto; }
 
-.m-zeus { --img: url(/img/zeus.webp); --ar: 462 / 978; }
-.m-pharaon { --img: url(/img/pharaon.webp); --ar: 493 / 1007; }
+.m-zeus { --img: url(../assets/img/zeus.webp); --ar: 462 / 978; }
+.m-pharaon { --img: url(../assets/img/pharaon.webp); --ar: 493 / 1007; }
 
 /* ---------- Tipográfia & gombok ---------- */
 .eyebrow {
