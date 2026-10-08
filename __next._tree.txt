@@ -1,0 +1,10 @@
+:HL["/Zeus-Perfume/_next/static/media/48410f3df60da620-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/media/7b89a4fd5e90ede0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/media/a273567b21a7c318-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/media/b497598118275079-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/media/c77c6d1789db6e18-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/media/e18f83c737786aa7-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/media/e74f24ed7f0e4323-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Zeus-Perfume/_next/static/css/2beb92e728ee25ba.css","style"]
+1:[["children",{"s":"__PAGE__","h":160}]]
+0:{"b":"ZWwB8fqwdUjChVgnTwsJL","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
