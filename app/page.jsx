@@ -1,4 +1,5 @@
 import ZeusEffects from '../components/ZeusEffects';
+import SlamText from '../components/SlamText';
 import zeusImg from '../assets/img/zeus.webp';
 import pharaonImg from '../assets/img/pharaon.webp';
 
@@ -56,7 +57,7 @@ export default function Home() {
                 </svg>
               </div>
               <div className="hero__bottle">
-                <div className="b3d m-zeus" id="heroBottle" data-src={zeusImg.src} data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz, koppints rá a villámhoz"></div>
+                <div className="b3d m-zeus" id="heroBottle" data-src={zeusImg.src} data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz, koppints rá a villámhoz"><noscript><img src={zeusImg.src} alt="Zeus parfümösüveg" /></noscript></div>
               </div>
             </div>
 
@@ -115,7 +116,7 @@ export default function Home() {
             <div className="container col-grid">
               <header className="col-head">
                 <p className="eyebrow">A kollekció</p>
-                <h2 className="h2 slam" data-slam="">Válaszd ki <span className="gold">az istened</span></h2>
+                <SlamText className="h2" parts={[{ text: 'Válaszd ki ' }, { text: 'az istened', className: 'gold' }]} />
                 <div className="tabs" role="tablist" aria-label="Parfüm kiválasztása">
                   <span className="tabs__ink" aria-hidden="true"></span>
                   <button type="button" role="tab" id="tab-zeus" aria-selected="true" aria-controls="info" data-product="zeus">Zeus</button>
@@ -141,10 +142,10 @@ export default function Home() {
                 </div>
                 <div className="stage__rings" aria-hidden="true"><i></i><i></i><i></i></div>
                 <div className="stage__slot is-active" data-product="zeus">
-                  <div className="b3d m-zeus" data-src={zeusImg.src} data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz"></div>
+                  <div className="b3d m-zeus" data-src={zeusImg.src} data-label="Zeus parfümösüveg – húzd oldalra a forgatáshoz"><noscript><img src={zeusImg.src} alt="Zeus parfümösüveg" /></noscript></div>
                 </div>
                 <div className="stage__slot" data-product="pharaon">
-                  <div className="b3d m-pharaon" data-src={pharaonImg.src} data-label="Pharaon parfümösüveg – húzd oldalra a forgatáshoz"></div>
+                  <div className="b3d m-pharaon" data-src={pharaonImg.src} data-label="Pharaon parfümösüveg – húzd oldalra a forgatáshoz"><noscript><img src={pharaonImg.src} alt="Pharaon parfümösüveg" /></noscript></div>
                 </div>
                 <button className="stage__arrow stage__arrow--prev" type="button" data-step="-1" aria-label="Előző parfüm"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
                 <button className="stage__arrow stage__arrow--next" type="button" data-step="1" aria-label="Következő parfüm"><svg aria-hidden="true"><use href="#i-right"/></svg></button>

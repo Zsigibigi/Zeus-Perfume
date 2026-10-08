@@ -20,10 +20,24 @@ export const viewport = {
   themeColor: '#05060a',
 };
 
+// Első festés előtt: no-js → js (JavaScript nélkül így minden tartalom látszik).
+const HEAD_SCRIPT = "document.documentElement.classList.replace('no-js','js')";
+
+// Az intro első (csak CSS-es) fázisa azonnal indul, nem várja meg a React betöltését.
+// Ha a JS csomag 8 mp alatt sem fut le (pl. betöltési hiba), felfedjük az oldalt.
+const BODY_SCRIPT = [
+  "if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(function(){if(document.body.classList.contains('intro'))document.body.classList.add('i-line')},80)}",
+  "setTimeout(function(){if(!window.__zeusInit){var b=document.body.classList;b.remove('intro','i-line');b.add('is-ready')}},8000)",
+].join(';');
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="hu" className={`js ${cinzel.variable} ${cormorant.variable} ${didot.variable}`} suppressHydrationWarning>
+    <html lang="hu" className={`no-js ${cinzel.variable} ${cormorant.variable} ${didot.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: HEAD_SCRIPT }} />
+      </head>
       <body className="intro" suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: BODY_SCRIPT }} />
         {children}
       </body>
     </html>
